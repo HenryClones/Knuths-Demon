@@ -1,0 +1,6 @@
+Create Java skeleton
+Begin writing reverseRNG method
+Find all seeds for a number which is the next integer of a power of 2
+Find all seeds for a number which is the next integer of any other number
+Find all seeds for a floating point number (Math.random)
+Pull request
