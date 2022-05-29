@@ -1,6 +1,16 @@
-Create Java skeleton
-Begin writing reverseRNG method
-Find all seeds for a number which is the next integer of a power of 2
-Find all seeds for a number which is the next integer of any other number
-Find all seeds for a floating point number (Math.random)
+Create boilerplate for JUnit tests:
+    TestReverser.java
+    TestFeeder.java
+    TestCLI.java
+Write tests for Reverser.reverse() using Random.nextInt as a guide,
+terminating early after 30 seconds
+    Test 1-4: small integer, modulus not a power of 2
+    Test 9-16: large integer, modulus not a power of 2
+    Test 11-15: small integer, modulus power of 2
+    Test 16-20: large integer, modulus power of 2
+    Test 21-24: n+1 testing for each prior case
+    Test 25-34: Floating point number tests, bit for bit
+    Test 35-???: Any other randomizable data type that has not been tested yet
+Write Reverser.reverse() to pass each group of tests at a time
+
 Pull request
