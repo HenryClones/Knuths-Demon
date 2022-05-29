@@ -1,8 +1,14 @@
 Create boilerplate for JUnit tests:
     TestReverser.java
     TestFeeder.java
+    TestKnuthReverser.java
+    TestKnuthFeeder.java
+    TestUserInterface.java
     TestCLI.java
-Write tests for Reverser.reverse() using Random.nextInt as a guide,
+
+Write tests for Reverser.reverse() with a mock Reverser
+
+Write tests for KnuthReverser.reverse() using Random.nextInt as a guide,
 terminating early after 30 seconds
     Test 1-4: small integer, modulus not a power of 2
     Test 9-16: large integer, modulus not a power of 2
@@ -11,6 +17,26 @@ terminating early after 30 seconds
     Test 21-24: n+1 testing for each prior case
     Test 25-34: Floating point number tests, bit for bit
     Test 35-???: Any other randomizable data type that has not been tested yet
-Write Reverser.reverse() to pass each group of tests at a time
+Write KnuthReverser.reverse() to pass each group of tests at a time
+
+Write tests for Feeder, using a mock Reverser
+Feeder determines the current state of Random via a series of prior outputs
+Feeder thus needs a Reverser to function
+Feeder should be able to call its Reverser once for each output, taking O(n)
+time for a linear congruential pseudorandom number generator
+    Test 1-10: small list of outputs
+    Test 11-20: 10000+ outputs fed in
+Write the Feeder abstract class
+
+Repeat for KnuthFeeder with a mock KnuthReverser
+
+Write tests for a mock UserInterface
+    Test all fields
+    Test all labels
+
+Write tests specific to TestCLI
+    Test with respect to things displaying correctly
+
+Remember: A UserInterface has a Feeder has a Reverser
 
 Pull request
